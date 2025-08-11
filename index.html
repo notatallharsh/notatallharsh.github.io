@@ -1,0 +1,150 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harsh More — Motion Designer</title>
+  <meta name="description" content="Harsh More — Senior Motion Designer. Resume & contact." />
+  <style>
+    :root{
+      --bg:#fff;
+      --text:#0b0b0b;
+      --muted:#6b6b6b;
+      --accent:#111;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:0 auto;padding:40px 28px;}
+    header{padding:40px 0;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:600;font-size:18px;letter-spacing:0.02em}
+    .nav a{margin-left:24px;color:var(--muted);font-size:14px}
+    /* Hero */
+    .hero{display:flex;gap:48px;align-items:center;padding:60px 0}
+    .hero-left{flex:1}
+    .kicker{color:var(--muted);text-transform:uppercase;letter-spacing:0.18em;font-size:12px;margin-bottom:18px}
+    h1{font-size:48px;margin:0;line-height:1.02;letter-spacing:-0.02em}
+    p.lead{color:var(--muted);font-size:18px;max-width:60ch;margin-top:18px}
+    .cta{margin-top:28px;display:flex;gap:12px;align-items:center}
+    .btn{padding:12px 18px;border-radius:12px;font-weight:600;border:1px solid rgba(0,0,0,0.08);background:transparent;cursor:pointer}
+    .btn-primary{background:#111;color:#fff;border:none;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+    /* Visual (placeholder) */
+    .visual{width:420px;height:300px;border-radius:16px;background:linear-gradient(135deg,#f3f3f3,#e9e9e9);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+    /* Sections */
+    section{padding:64px 0;border-top:1px solid #f0f0f0}
+    h2.section-title{font-size:20px;margin:0 0 24px 0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .card{background:transparent;padding:18px;border-radius:12px}
+    .role{font-weight:700}
+    .meta{color:var(--muted);font-size:14px;margin-top:6px}
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:12px}
+    .skill{padding:8px 12px;border-radius:999px;border:1px solid #efefef;color:var(--muted);font-size:13px}
+    /* Contact footer */
+    footer{padding:56px 0;color:var(--muted);font-size:14px;text-align:center}
+    /* Motion-like subtle movement */
+    .visual::after{content:"";position:absolute;width:320px;height:200px;background:rgba(0,0,0,0.02);transform:rotate(6deg);border-radius:12px;filter:blur(18px);}
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{flex-direction:column-reverse}
+      .visual{width:100%;height:220px}
+      .grid{grid-template-columns:1fr}
+    }
+    /* Smooth scroll behavior */
+    html{scroll-behavior:smooth}
+    /* Mini motion: fade-in on scroll */
+    .reveal{opacity:0;transform:translateY(18px);transition:all .7s cubic-bezier(.2,.9,.3,1);will-change:transform,opacity}
+    .reveal.visible{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">Harsh More</div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="intro">
+        <div class="hero-left">
+          <div class="kicker">Senior Motion Designer</div>
+          <h1 id="intro">I craft clear, kinetic visuals for brands —</h1>
+          <p class="lead">I design and animate 2D motion graphics, kinetic typography and social-first content for campaigns across entertainment, tech and consumer brands.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact">Contact</a>
+            <a class="btn" href="Harsh More CV.pdf" download>Download CV</a>
+          </div>
+        </div>
+        <div class="visual reveal" aria-hidden="true">
+          Motion Design — Preview
+        </div>
+      </section>
+
+      <section id="work" class="reveal">
+        <h2 class="section-title">Selected Experience</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="role">Sr. Motion Designer — Weber Shandwick</div>
+            <div class="meta">Apr 2022 — Present</div>
+            <p>Created 2D motion graphics and social-first animations for Marvel, Disney, L&T, Vedanta, Kotak, South Africa Tourism, Castrol, Stanley Black & Decker, OPPI.</p>
+          </div>
+          <div class="card">
+            <div class="role">Motion Designer — Blink Digital</div>
+            <div class="meta">Aug 2019 — Mar 2022</div>
+            <p>Worked on campaigns for KFC, Amazon, Audible, Zee5, ICICI, Nayara, GSK.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="reveal">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+          <div class="skill">2D Animation</div>
+          <div class="skill">After Effects</div>
+          <div class="skill">Kinetic Typography</div>
+          <div class="skill">Premiere Pro</div>
+          <div class="skill">Photoshop</div>
+          <div class="skill">Illustrator</div>
+          <div class="skill">Video & Sound Editing</div>
+        </div>
+      </section>
+
+      <section id="contact" class="reveal">
+        <h2 class="section-title">Contact</h2>
+        <p style="color:var(--muted)">Email — <a href="mailto:moreharsh9@gmail.com">moreharsh9@gmail.com</a></p>
+        <p style="color:var(--muted)">Phone — <a href="tel:+919028075888">+91 9028075888</a></p>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Harsh More — Motion Designer
+    </footer>
+  </div>
+
+  <script>
+    // Intersection observer for reveal animations
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+
+    // Tiny parallax on mouse for the visual box (desktop only)
+    const visual = document.querySelector('.visual');
+    if(window.matchMedia('(min-width:900px)').matches && visual){
+      document.addEventListener('mousemove',(e)=>{
+        const x = (e.clientX - window.innerWidth/2)/40;
+        const y = (e.clientY - window.innerHeight/2)/40;
+        visual.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    }
+  </script>
+</body>
+</html>
